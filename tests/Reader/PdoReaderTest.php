@@ -9,13 +9,6 @@ use Port\Reader\PdoReader;
 
 class PdoReaderTest extends \PHPUnit_Framework_TestCase
 {
-	public function testGetFields()
-	{
-		$fields = $this->getReader()->getFields();
-		$this->assertInternalType('array', $fields);
-		$this->assertEquals(array('id', 'username', 'name'), $fields);
-	}
-
 	public function testCount()
 	{
 		$this->assertEquals(100, $this->getReader()->count());
